@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+#news{
+	border:1px solid red;
+	width:400px;
+	height:300px;
+}
+</style>
+</head>
+<body>
+
+<div id="news"></div>
+<button id="sport">Load Sport news</button>
+<button id="politics">Load Politics news</button>
+<button id="bussiness">Load Bussiness news</button>
+
+
+
+<script>
+/* Write your code here */
+let News=document.getElementById("news")
+let Sport=document.getElementById("sport")
+let Politics=document.getElementById("politics")
+let Bussiness=document.getElementById("bussiness")
+let action=[Sport,Politics,Bussiness]
+for(let i=0;i<action.length;i++){
+	action[i].addEventListener("click",function(){
+		if (i===0){
+			News.innerHTML = "<h1>"+"Messi scored 5 goals"+"</h1><p>"+"Messi scored 5 goals"+"</p>"
+		};
+		if (i===1){
+			News.innerHTML = "<h1>"+"Trump visited UK"+"</h1><p>"+"Trump started his foreign tour by visiting UK"+"</p>"
+		};
+		if (i===2){
+			News.innerHTML = "<h1>"+"Dow Jones index has fallen"+"</h1><p>"+ "Dow Jones index has fallen, because of prices for petrol"+"</p>"
+		};
+        });
+}
+</script>
+</body>
+</html>
